@@ -1,12 +1,15 @@
 :root{
---nav-bg-color:black;
---main-bg-color: #1f2427;
+--main-bg-color: #424547;
+--chip-bg-color:#302D3D;
+--nav-bg-color:rgb(85, 85, 88);
+--main-boxshadow:0 4px 8px 0 rgba(163, 163, 163, 0.068),
+0 6px 20px 0 rgba(83, 78, 78, 0.19);
+
+
 }
 
 html,
 body,.page {
-    width: 100vw;
-    height: 100vh;
     margin: 0;
     padding: 0;
     transition: all .8s cubic-bezier(0.54, 0.35, 0.29, 0.99);
@@ -16,7 +19,15 @@ body,.page {
     color: #fff;
     overflow: hidden;
 }
-
+body,.page#p1,.page#p4{
+      width: 100vw;
+      height: 100vh;
+}
+.page#p2,.page#p3{
+      width: auto;
+      left: 100%;
+      height: 100vh;
+}
 * {
     font-family: 'open sans', 'lato', 'helvetica', sans-serif;
 }
@@ -27,10 +38,39 @@ body,.page {
 
 #p1 {
     left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-#p2,
-#p3,
+#p4 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo{
+  display: flex;
+  justify-content: center;
+}
+.logo img{
+    max-width: 200px;
+    align-items: center;
+}
+.hero-section{
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 30vw;
+    padding: 25px;
+    background-color: var(--chip-bg-color);
+  box-shadow: var(--main-boxshadow)
+}
+.hero-section h1 span{
+    color: turquoise;
+}
+.hero-section p a{
+    color:rgb(161, 192, 182);
+}
 #p4{
     left: 200%;
 }
@@ -47,14 +87,14 @@ body,.page {
 }
 
 #p4 {
-    background: var(--main-bg-color);
+    background: var(--nav-bg-color);
 }
 #t2:target #p2,
 #t3:target #p3 {
-    transform: translateX(-120%);
-    -webkit-transform: translateX(-120%);
-    -moz-transform: translateX(-120%);
-    -o-transform: translateX(-120%);
+    transform: translateX(-320px);
+    -webkit-transform: translateX(-320px);
+    -moz-transform: translateX(-320px);
+     -o-transform: translateX(-320px);
     transition-delay: .4s !important;
 }
 #t4:target #p4{
@@ -64,16 +104,19 @@ body,.page {
      -o-transform: translateX(-190%);
      transition-delay: .4s !important;
 }
-#t2:target #p1,
-#t3:target #p1,
-#t4:target #p1{
-    background: black;
-}
+
 
 #t2:target #p1 .icon,
 #t3:target #p1 .icon,
 #t4:target #p1 .icon{
     -webkit-filter: blur(3px);
+}
+#menu a span{
+    color: #fff;
+    font-size: 12px;
+    display: block;
+    margin-top: -25px;
+    transition: all .5s ease-out !important;
 }
 
 .icon {
@@ -89,7 +132,9 @@ ul .icon:hover {
 .page .icon .title {
     line-height: 2;
 }
-
+#t4{
+    position: relative;
+}
 #t2:target ul .icon,
 #t3:target ul .icon,
 #t4:target ul .icon{
@@ -102,41 +147,59 @@ ul .icon:hover {
 
 #t2:target #dos,
 #t3:target #tres,
-#t4:target #cuatro,
 #t4:target #cinco {
     transform: scale(1.2) !important;
     -webkit-transform: scale(1.2) !important;
     -moz-transform: scale(1.2) !important;
     -o-transform: scale(1.2) !important;
+    margin-bottom: 40px;
 }
 
-ul {
-    position: fixed;
+.menusection{
+position: fixed;
+ background-color: var(--chip-bg-color);
+ height: 100vh;
+width: 10%;
+z-index: 1;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+ ul {
+      z-index: 1;
+      padding: 0;
+      text-align: center;
+      background-color: transparent;
+}
+ ul#menu {
     display: flex;
     flex-direction: column;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    height: 280px;
-    width: 10%;
-    padding: 0;
-    text-align: center;
-}
-
+ }
+ 
 #menu .icon {
     margin: 30px 0;
-    transition: all .5s ease-out !important;
+     transition: all .5s ease-out !important;
     -webkit-transition: all .5s ease-out;
     -moz-transition: all .5s ease-out;
-    -o-transition: all .5s ease-out;
-}
+    -o-transition: all .5s ease-out; 
+} 
+
 
 a {
     text-decoration: none;
 }
 
+.title_container{
+    border-bottom: 2px solid var(--chip-bg-color);
+    margin-bottom: 5px;
+}
+.title{
+padding: 10px 20px;
+
+}
+.title h1{
+    font-size: 1.5rem;
+}
 /*  CHIP  */
 .chip_container{
     display: flex;
@@ -148,8 +211,7 @@ a {
     width: 19rem;
     height: 4rem;
     border-radius: 1rem;
-    /* box-shadow: ; */
-    background-color: #302D3D;
+    background-color: var(--chip-bg-color);
     display: flex;
     justify-content: space-around;
     align-items: center;

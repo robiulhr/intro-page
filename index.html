@@ -5,7 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="input-group-append.css">
+    <link rel="stylesheet" href="joinSection.css">
+    <link rel="stylesheet" href="checkbox.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <title>Document</title>
 </head>
 
@@ -14,26 +18,49 @@
         <div class="ct" id="t2">
             <div class="ct" id="t3">
                 <div class="ct" id="t4">
-                    <ul id="menu">
-                        <a href="#t1">
-                            <li class="icon fas fa-bolt" id="uno"></li>
-                        </a>
-                        <a href="#t2">
-                            <li class="icon fa fa-keyboard-o" id="dos"></li>
-                        </a>
-                        <a href="#t3">
-                            <li class="icon fa fa-rocket" id="tres"></li>
-                        </a>
+                    <div class="menusection">
+                        <ul id="menu">
+                            <a href="#t1">
+                                <li class="icon fas fa-home" id="uno"></li>
+                                <span>Home</span>
+                            </a>
+                            <a href="#t2">
+                                <li class="icon fa fa-user" id="dos"></li>
+                                <span>Online</span>
 
-                        <a href="#t4">
-                            <li class="icon fa fa-plus-circle" id="cinco"></li>
-                        </a>
-                    </ul>
+                            </a>
+                            <a href="#t3">
+                                <li class="icon fa fa-file-video" id="tres"></li>
+                                <span>Meetings</span>
+
+                            </a>
+
+                            <a href="#t4">
+                                <li class="icon fa fa-plus-circle" id="cinco"></li>
+                                <span>Join</span>
+
+                            </a>
+                        </ul>
+                    </div>
+
                     <div class="page" id="p1">
+
+                        <div class="hero-section">
+                            <div class="logo">
+                                <img src="https://imgx.app/ui87kj">
+                            </div>
+                            <h1>Host your own <span>video conference </span>for work or play!
+                            </h1>
+                            <h4>Must be 16 Years or older to use any of the the VVeb.ca services and content.</h4>
+                            <p>Please read our
+                                <a href="#"> privacy policy </a> and <a href="#">terms</a>
+                                and <a href="#"> conditions</a> for more details
+                            </p>
+                        </div>
 
                     </div>
                     <div class="page" id="p2">
-                        <div class="container">
+                        <div class="title_container">
                             <div class="title">
                                 <h1>Online People</h1>
                             </div>
@@ -61,9 +88,118 @@
 
                     </div>
                     <div class="page" id="p3">
+                        <div class="title_container">
+                            <div class="title">
+                                <h1>Running meeting</h1>
+                            </div>
+                        </div>
 
+                        <div class="chip_container">
+                            <div class="chip">
+                                <div class="chip__img">
+                                    <img src="./img/img01.jpg">
+                                </div>
+                                <div class="chip_paragraph">
+                                    <p class="">Neumorphic Design</p>
+                                </div>
+
+                            </div>
+                            <div class="chip">
+                                <div class="chip__img">
+                                    <img src="./img/img01.jpg">
+                                </div>
+                                <p class="chip_paragraph">Neumorphic Design</p>
+
+                            </div>
+
+                        </div>
                     </div>
                     <div class="page" id="p4">
+                        <div class="center">
+                            <div class="entering-info">
+                                <h2 class="text-capitalize">
+                                    Hey, <span>Stranger</span>!
+                                </h2>
+                                <div class="setting-button">
+                                    <button>
+                                        <i class="fas fa-cog"></i>
+                                    </button>
+
+                                </div>
+                                <form>
+                                    <div class="input-group mb-2">
+                                        <input class="form-control conference-id">
+                                        <label class="form-control-placeholder" for="conferenceId">Conference ID</label>
+                                        <div class="input-group-append">
+                                            <button class="btn btn-outline-secondary"><i
+                                                    class="fas fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label class="checkbox-container">Mute camera
+                                            <input type="checkbox" checked="checked">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+
+
+                                </form>
+
+                            </div>
+                        </div>
+
+
+                        <div class="cd-modal">
+                            <div class="modal-header">
+                                <div class="title">
+                                    <h1 style="text-align: center;">Settings</h1>
+                                    <hr>
+                                </div>
+                                <div class="close-button">
+                                    <a href="#t4" class="cd-modal-close">X</a>
+
+                                </div>
+                            </div>
+                            <div class="cd-modal-content">
+                                <table class="table table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Shortcut Key</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">C</th>
+                                            <td>Chat</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">F</th>
+                                            <td>Attach File</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">A</th>
+                                            <td>Mute/Unmute Audio</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">L</th>
+                                            <td>Leave Conference</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">V</th>
+                                            <td>On/Off Video</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">S</th>
+                                            <td>Screen Share</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                        </div>
+
+
 
                     </div>
                 </div>
